@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+}
+
+.firstpage {
+    padding-left: 17%;
+    padding-top: 4.5%;
+}
+
+.firstbutton {
+    padding-left: 40%;
+    padding-top: -10%;
+}
+
+.firstbutton span {
+    position: relative;
+    display: inline-flex;
+    width: 180px;
+    height: 55px;
+    margin: 0 15px;
+    perspective: 1000px;
+}
+
+.firstbutton span a {
+    font-size: 21px;
+    letter-spacing: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    transition: transform 0.25s;
+    font-family: 'Permanent Marker'; 
+    font-weight: bolder;
+    
+}
+
+.firstbutton span a:before,
+.firstbutton span a:after {
+    position: absolute;
+    content: "LEMME CHECKZZ...";
+    height: 60px;
+    width: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid white;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.firstbutton span a:before {
+    color: black;
+    background: white;
+    transform: rotateY(0deg) translateZ(25px);
+}
+
+.firstbutton span a:after {
+    color: white;
+    transform: rotateX(90deg) translateZ(25px);
+}
+
+.firstbutton span a:hover {
+    transform: translateZ(-25px) rotateX(-90deg);
+}
